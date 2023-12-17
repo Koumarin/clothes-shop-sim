@@ -6,7 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
 	[SerializeField]
-	private int walkSpeed;
+	private float walkSpeed;
+	[SerializeField]
+	private float acceleration;
 
 	private Rigidbody2D body;
 
@@ -19,7 +21,13 @@ public class PlayerController : MonoBehaviour
 
 	void Update()
 	{
-		body.velocity = direction * Time.deltaTime * walkSpeed;
+		var finalVelocity = direction * walkSpeed;
+
+		body.velocity = Vector2.Lerp(body.velocity,
+		                             finalVelocity,
+		                             acceleration);
+
+		Debug.Log(body.velocity);
 	}
 
 	public void OnMove(InputAction.CallbackContext context)
