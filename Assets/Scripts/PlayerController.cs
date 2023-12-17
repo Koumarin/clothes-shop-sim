@@ -26,8 +26,6 @@ public class PlayerController : MonoBehaviour
 		body.velocity = Vector2.Lerp(body.velocity,
 		                             finalVelocity,
 		                             acceleration);
-
-		Debug.Log(body.velocity);
 	}
 
 	public void OnMove(InputAction.CallbackContext context)
