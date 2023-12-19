@@ -224,6 +224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1331656316}
     m_Modifications:
+    - target: {fileID: 2127621260227017513, guid: aa90d62c303b666498d2af4dddf9f856, type: 3}
+      propertyPath: price
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8747530411534935916, guid: aa90d62c303b666498d2af4dddf9f856, type: 3}
       propertyPath: m_Name
       value: Shop Item (1)
